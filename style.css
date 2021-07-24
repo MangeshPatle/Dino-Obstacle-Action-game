@@ -1,0 +1,166 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: brown;
+    overflow: hidden;
+}
+
+.gameover {
+    position: absolute;
+    top: -5vh;
+    left: 27vh;
+    text-align: center;
+    margin: 10vh;
+    padding: 10vh;
+    font-size: 5vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    animation: gameover;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: 1s;
+}
+
+#b1 {
+    color: red;
+}
+
+#scoreCont {
+    position: absolute;
+    top: 3vh;
+    right: 5vh;
+    padding: 2vh;
+    margin: 2vh;
+    color: blue;
+    font-weight: bold;
+    border: 1px solid black;
+    background-color: cyan;
+    border-radius: 2vh;
+}
+
+.gamecontainer {
+    background-image: url(bg.png);
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    /* background-size: cover; */
+    background-size: 100vw 100vh;
+}
+
+.dino {
+    background-image: url(dino.png);
+    background-size: cover;
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    left: 30vh;
+    bottom: 0vh;
+}
+
+.obstacle {
+    background-image: url(dragon.png);
+    height: 100px;
+    width: 140px;
+    position: absolute;
+    left: 60vw;
+    bottom: 0vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.animatedino {
+    animation: dino 0.6s linear;
+}
+
+.obstacleAni {
+    animation: obstacleAni 5s linear infinite;
+}
+
+@keyframes dino {
+    0% {
+        bottom: 0;
+    }
+    /* 50% {
+        bottom: 200;
+    } */
+    100% {
+        bottom: 422px;
+    }
+    /* 50% {
+        bottom: 200;
+    } */
+    0% {
+        bottom: 0;
+    }
+}
+
+@keyframes obstacleAni {
+    0% {
+        left: 100vw;
+        /* 0% per 100vw se niklega or uske bad fir right tk jakar -10vw se or repeat hoga */
+    }
+    100% {
+        left: -10vw;
+    }
+}
+
+#imgg {
+    width: 100px;
+    height: 100px;
+    border-radius: 84px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+#name {
+    position: absolute;
+    top: 110px;
+    left: 10px;
+    color: blue;
+    font-weight: bold;
+    font-size: 13px;
+    animation: name;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: 1s;
+}
+
+@keyframes gameover {
+    0% {
+        color: rgb(26, 26, 189);
+    }
+    20% {
+        color: rgb(202, 27, 79);
+    }
+    40% {
+        color: rgb(85, 59, 4);
+    }
+    60% {
+        color: rgb(63, 3, 40);
+    }
+    80% {
+        color: rgb(138, 28, 240);
+    }
+    100% {
+        color: rgb(223, 7, 7);
+    }
+}
+
+@keyframes name {
+    0% {
+        color: rgb(20, 212, 46);
+    }
+    30% {
+        color: rgb(31, 30, 3);
+    }
+    60% {
+        color: rgb(21, 17, 240);
+    }
+    100% {
+        color: rgb(151, 5, 5);
+    }
+}
